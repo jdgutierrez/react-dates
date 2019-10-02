@@ -3,6 +3,9 @@
 <!--
 - []  ([#](https://github.com/airbnb/react-dates/pull/))
 -->
+## 21.3.0
+
+- [new] Add Calendar Footer support when there is already a calendar info panel on some other position
 
 ## 21.2.0
 
