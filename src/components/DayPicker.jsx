@@ -243,6 +243,7 @@ class DayPicker extends React.PureComponent {
     this.closeKeyboardShortcutsPanel = this.closeKeyboardShortcutsPanel.bind(this);
 
     this.setCalendarInfoRef = this.setCalendarInfoRef.bind(this);
+    this.setCalendarFooterRef = this.setCalendarFooterRef.bind(this);
     this.setContainerRef = this.setContainerRef.bind(this);
     this.setTransitionContainerRef = this.setTransitionContainerRef.bind(this);
     this.setMonthTitleHeight = this.setMonthTitleHeight.bind(this);
@@ -668,6 +669,10 @@ class DayPicker extends React.PureComponent {
     this.calendarInfo = ref;
   }
 
+  setCalendarFooterRef(ref) {
+    this.calendarFooter = ref;
+  }
+
   setTransitionContainerRef(ref) {
     this.transitionContainer = ref;
   }
@@ -1031,8 +1036,8 @@ class DayPicker extends React.PureComponent {
 
     const calendarFooter = renderCalendarFooter && (
       <div
-        ref={this.setCalendarInfoRef}
-        {...css((calendarInfoIsInline) && styles.DayPicker_calendarInfo__horizontal)}
+        ref={this.setCalendarFooterRef}
+        {...css(styles.DayPicker_calendarInfo__horizontal)}
       >
         {renderCalendarFooter()}
       </div>
