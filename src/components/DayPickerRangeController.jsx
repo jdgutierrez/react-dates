@@ -91,6 +91,7 @@ const propTypes = forbidExtraProps({
   renderCalendarDay: PropTypes.func,
   renderDayContents: PropTypes.func,
   renderCalendarInfo: PropTypes.func,
+  renderCalendarFooter: PropTypes.func,
   renderKeyboardShortcutsButton: PropTypes.func,
   renderKeyboardShortcutsPanel: PropTypes.func,
   calendarInfoPosition: CalendarInfoPositionShape,
@@ -159,6 +160,7 @@ const defaultProps = {
   renderCalendarDay: undefined,
   renderDayContents: null,
   renderCalendarInfo: null,
+  renderCalendarFooter: null,
   renderMonthElement: null,
   renderKeyboardShortcutsButton: undefined,
   renderKeyboardShortcutsPanel: undefined,
@@ -1159,6 +1161,7 @@ export default class DayPickerRangeController extends React.PureComponent {
       renderCalendarDay,
       renderDayContents,
       renderCalendarInfo,
+      renderCalendarFooter,
       renderMonthElement,
       calendarInfoPosition,
       onBlur,
@@ -1218,6 +1221,7 @@ export default class DayPickerRangeController extends React.PureComponent {
         renderCalendarDay={renderCalendarDay}
         renderDayContents={renderDayContents}
         renderCalendarInfo={renderCalendarInfo}
+        renderCalendarFooter={renderCalendarFooter}
         renderMonthElement={renderMonthElement}
         renderKeyboardShortcutsButton={renderKeyboardShortcutsButton}
         renderKeyboardShortcutsPanel={renderKeyboardShortcutsPanel}

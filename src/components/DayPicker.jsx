@@ -65,6 +65,7 @@ const propTypes = forbidExtraProps({
   initialVisibleMonth: PropTypes.func,
   firstDayOfWeek: DayOfWeekShape,
   renderCalendarInfo: PropTypes.func,
+  renderCalendarFooter: PropTypes.func,
   calendarInfoPosition: CalendarInfoPositionShape,
   hideKeyboardShortcutsPanel: PropTypes.bool,
   daySize: nonNegativeInteger,
@@ -130,6 +131,7 @@ export const defaultProps = {
   initialVisibleMonth: () => moment(),
   firstDayOfWeek: null,
   renderCalendarInfo: null,
+  renderCalendarFooter: null,
   calendarInfoPosition: INFO_POSITION_BOTTOM,
   hideKeyboardShortcutsPanel: false,
   daySize: DAY_SIZE,
@@ -958,6 +960,7 @@ class DayPicker extends React.PureComponent {
       renderCalendarDay,
       renderDayContents,
       renderCalendarInfo,
+      renderCalendarFooter,
       renderMonthElement,
       renderKeyboardShortcutsButton,
       renderKeyboardShortcutsPanel,
@@ -1023,6 +1026,15 @@ class DayPicker extends React.PureComponent {
         {...css((calendarInfoIsInline) && styles.DayPicker_calendarInfo__horizontal)}
       >
         {renderCalendarInfo()}
+      </div>
+    );
+
+    const calendarFooter = renderCalendarFooter && (
+      <div
+        ref={this.setCalendarInfoRef}
+        {...css((calendarInfoIsInline) && styles.DayPicker_calendarInfo__horizontal)}
+      >
+        {renderCalendarFooter()}
       </div>
     );
 
@@ -1165,6 +1177,7 @@ class DayPicker extends React.PureComponent {
           </div>
 
           {(calendarInfoPositionBottom || calendarInfoPositionAfter) && calendarInfo}
+          {!calendarInfoPositionBottom && calendarFooter}
         </OutsideClickHandler>
       </div>
     );

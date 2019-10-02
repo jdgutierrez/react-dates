@@ -88,6 +88,7 @@ const defaultProps = {
   keepOpenOnDateSelect: false,
   reopenPickerOnClearDates: false,
   renderCalendarInfo: null,
+  renderCalendarFooter: null,
   calendarInfoPosition: INFO_POSITION_BOTTOM,
   hideKeyboardShortcutsPanel: false,
   daySize: DAY_SIZE,
@@ -431,6 +432,7 @@ class DateRangePicker extends React.PureComponent {
       renderCalendarDay,
       renderDayContents,
       renderCalendarInfo,
+      renderCalendarFooter,
       renderMonthElement,
       calendarInfoPosition,
       firstDayOfWeek,
@@ -526,6 +528,7 @@ class DateRangePicker extends React.PureComponent {
           renderCalendarDay={renderCalendarDay}
           renderDayContents={renderDayContents}
           renderCalendarInfo={renderCalendarInfo}
+          renderCalendarFooter={renderCalendarFooter}
           renderMonthElement={renderMonthElement}
           calendarInfoPosition={calendarInfoPosition}
           isFocused={isDayPickerFocused}

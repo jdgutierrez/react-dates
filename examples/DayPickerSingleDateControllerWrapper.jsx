@@ -31,6 +31,7 @@ const propTypes = forbidExtraProps({
   withPortal: PropTypes.bool,
   initialVisibleMonth: PropTypes.func,
   renderCalendarInfo: PropTypes.func,
+  renderCalendarFooter: PropTypes.func,
 
   navPrev: PropTypes.node,
   navNext: PropTypes.node,
@@ -69,6 +70,7 @@ const defaultProps = {
   onOutsideClick() {},
   keepOpenOnDateSelect: false,
   renderCalendarInfo: null,
+  renderCalendarFooter: null,
   isRTL: false,
 
   // navigation related props
