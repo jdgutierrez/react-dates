@@ -1030,7 +1030,7 @@ function (_ref) {
     }, css(calendarInfoIsInline && styles.DayPicker_calendarInfo__horizontal)), renderCalendarInfo());
     var calendarFooter = renderCalendarFooter && React.createElement("div", _extends({
       ref: this.setCalendarFooterRef
-    }, css(styles.DayPicker_calendarInfo__horizontal)), renderCalendarFooter());
+    }, css(styles.DayPicker_calendarFooter__horizontal)), renderCalendarFooter());
     var calendarInfoPanelWidth = renderCalendarInfo && calendarInfoIsInline ? calendarInfoWidth : 0;
     var firstVisibleMonthIndex = this.getFirstVisibleIndex();
     var wrapperHorizontalWidth = calendarMonthWidth * numberOfMonths + 2 * dayPickerHorizontalPadding; // Adding `1px` because of whitespace between 2 inline-block
@@ -1161,6 +1161,11 @@ export default withStyles(function (_ref3) {
     DayPicker_calendarInfo__horizontal: {
       display: 'inline-block',
       verticalAlign: 'top'
+    },
+    DayPicker_calendarFooter__horizontal: {
+      display: 'inline-block',
+      verticalAlign: 'top',
+      width: '100%'
     },
     DayPicker_wrapper__horizontal: {
       display: 'inline-block',

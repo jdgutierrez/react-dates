@@ -589,7 +589,15 @@
 .DayPicker_focusRegion {
   outline: 0
 }
-.DayPicker_calendarInfo__horizontal,
+.DayPicker_calendarInfo__horizontal {
+  display: inline-block;
+  vertical-align: top
+}
+.DayPicker_calendarFooter__horizontal {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%
+}
 .DayPicker_wrapper__horizontal {
   display: inline-block;
   vertical-align: top

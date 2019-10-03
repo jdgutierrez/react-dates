@@ -1037,7 +1037,7 @@ class DayPicker extends React.PureComponent {
     const calendarFooter = renderCalendarFooter && (
       <div
         ref={this.setCalendarFooterRef}
-        {...css(styles.DayPicker_calendarInfo__horizontal)}
+        {...css(styles.DayPicker_calendarFooter__horizontal)}
       >
         {renderCalendarFooter()}
       </div>
@@ -1244,6 +1244,12 @@ export default withStyles(({
   DayPicker_calendarInfo__horizontal: {
     display: 'inline-block',
     verticalAlign: 'top',
+  },
+
+  DayPicker_calendarFooter__horizontal: {
+    display: 'inline-block',
+    verticalAlign: 'top',
+    width: '100%',
   },
 
   DayPicker_wrapper__horizontal: {
